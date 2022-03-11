@@ -1,0 +1,16 @@
+<section class="person-portrait" :class="{showDetails: showDetails}" @click="handleClick" @mouseover="showDetails = true" @mouseleave="showDetails = false">
+    <div class="image-container">
+        <div class="image" :class="{blur: showDetails}"></div>
+        <div class="content">
+            <transition name="appear-from-top">
+                <div v-if="showDetails" class="go-to-portfolio">
+                    <div span="12" class="text">> Voir ses réalisations</div>
+                </div>
+            </transition>
+        </div>
+    </div>
+    <div class="caption">
+        {{ person.name }}
+    </div>
+</section>
+

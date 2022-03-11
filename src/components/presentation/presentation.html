@@ -1,0 +1,60 @@
+<section class="presentation">
+    <section id="shop">
+        <h1 class="over-ink-splash">Tattoo Studio "Tewfick"</h1>
+        <div class="row-text-image">
+            <div class="text">
+                <img class="ink-splash" src="/image/ink_splash/ink_splash_4.png" alt="Tâche d'encre">
+                <div class="wrapper over-ink-splash">
+                    <p class="hidden" v-infocus="'css-animation-appear-from-left'">
+                        Studio de tatouage et de piercing indépendant basé sur Angers. Tattoo Studio Tewfick est installé dans le centre ville d'Angers dans le Maine et Loire depuis 1983 en haut de la place Imbach, à côté du boulevard Carnot et à 2 pas du boulevard Foch et du Ralliement.
+                    </p>
+                    <p class="hidden" v-infocus="'css-animation-appear-from-left'">
+                        Dans notre unique boutique, vous pourrez également trouver toute une gamme de bijoux pour vos
+                        piercings et des motifs d'exemples pour vos tatouages.
+                    </p>
+                    <p class="hidden" v-infocus="'css-animation-appear-from-left'">
+                        Tattoo Studio est réputé pour réaliser tous types de tatouages:
+                    <el-row>
+                        <ul>
+                        <el-col :xs="24" :md="12">
+                                <li>Portrait</li>
+                                <li>Paysage</li>
+                                <li>Maori&nbsp;/&nbsp;Polynésien</li>
+                                <li>Animal&nbsp;/&nbsp;Floral</li>
+                                <li>Recouvrement</li>
+                        </el-col>
+                        <el-col :xs="24" :md="12">
+                                <li>Abstrait&nbsp;/&nbsp;Géométrique</li>
+                                <li>Dessin&nbsp;/&nbsp;Croquis</li>
+                                <li>Mandala&nbsp;/&nbsp;Ornemental</li>
+                                <li>Flash</li>
+                                <li>...</li>
+                        </el-col>
+                        </ul>
+                    </el-row>
+                    </p>
+                </div>
+                <img class="ink-splash" src="/image/ink_splash/ink_splash_3.png" alt="Tâche d'encre">
+            </div>
+            <div class="image devanture over-ink-splash"></div>
+        </div>
+    </section>
+    <section id="map" class="over-ink-splash">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.8612731872713!2d-0.5470086203765869!3d47.47313274820805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480878ee9573b803%3A0x5074676c07f0b963!2sTattoo+Studio+Tewfick!5e0!3m2!1sfr!2sfr!4v1543239454547" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    <section id="realisations">
+        <h1>Nos réalisations</h1>
+        <div class="realisations">
+            <!--<router-link v-for="tattoo in tattoos" :to="routeRealisations">-->
+                <div v-for="tattoo in tattoos" class="item image-cover" :style="{backgroundImage: 'url('+tattoo.src+')'}"></div>
+            <!--</router-link>-->
+        </div>
+        <router-link :to="routeRealisations" class="go-to-realisation">
+            <div class="wrapper">
+                Voir plus de tatouages <i class="el-icon-circle-plus"></i>
+            </div>
+        </router-link>
+    </section>
+    <contact :showTitle="true"/>
+</section>
+

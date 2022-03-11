@@ -1,0 +1,19 @@
+<section class="gallery">
+    <div class="close-btn" @click="close"><i class="el-icon-circle-close"></i></div>
+    <el-carousel height="100vh" trigger="click" :autoplay="false" arrow="always" indicator-position="none">
+        <el-carousel-item v-for="(photo,index) in photos" :key="index">
+            <!--<span class="helper"></span>-->
+            <!--<img :src="photo" :alt="photo | filename">-->
+            <div class="photo" :style="{backgroundImage: `url('${photo}')`}" :alt="photo | filename"></div>
+        </el-carousel-item>
+    </el-carousel>
+    <!--<div class="photo">-->
+        <!--<img :src="activePhotoUrl" :alt="activePhotoName">-->
+    <!--</div>-->
+    <!--<div class="actions">-->
+        <!--<div class="previous" @click="previous"><</div>-->
+        <!--<div class="pagination" @click="close">{{ activePhotoIndex +1 }} / {{ photos.length }}</div>-->
+        <!--<div class="next" @click="next">></div>-->
+    <!--</div>-->
+</section>
+

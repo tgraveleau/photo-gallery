@@ -1,0 +1,205 @@
+@import '../../variables.scss';
+
+.presentation {
+  h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    color: white;
+    background: $gradient-tertiary;
+    margin: 0;
+    padding: 10px;
+  }
+  .row-text-image {
+    width: 100%;
+    .text {
+      width: 100%;
+      padding: 1rem 0;
+      transition: all .5s;
+      .wrapper {
+        width: 85%;
+        margin: 0 auto;
+      }
+    }
+    .image {
+      width: 100%;
+      min-height: 25rem;
+    }
+  }
+  #shop {
+    .row-text-image {
+      .text {
+        .ink-splash {
+          &:nth-of-type(1) {
+            $transform: translateY(-3rem) translateX(2vw);
+            height: 10rem;
+            width: 14rem;
+            -webkit-transform: $transform;
+            transform: $transform;
+          }
+          &:nth-of-type(2) {
+            $transform: translateY(-4rem) translateX(35vw);
+            height: 7rem;
+            width: 12rem;
+            -webkit-transform: $transform;
+            transform: $transform;
+          }
+        }
+      }
+      .devanture {
+        background-image: url('/image/shop/devanture.jpg');
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+  #realisations {
+    h1 {
+      color: $tertiary-color;
+      background: white;
+    }
+    .realisations {
+      height: 15rem;
+        .item {
+          height: 100%;
+          width: 50%;
+          display: inline-flex;
+          &:nth-child(n+3) {
+            display: none;
+          }
+        }
+    }
+    .go-to-realisation {
+      text-decoration: none;
+      .wrapper {
+        text-align: center;
+        color: white;
+        background: $gradient-tertiary;
+        height: 2rem;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        font-weight: bold;
+        transition: all .5s;
+      }
+      &:hover {
+        .wrapper {
+          letter-spacing: .15rem;
+        }
+      }
+    }
+  }
+  #map {
+    width: 100%;
+    height: 25rem;
+  }
+  #actualites {
+    h1 {
+      font-size: 2.25rem;
+      text-align: center;
+      background: none;
+      color: white;
+      font-size: 3.5rem;
+      margin: 1rem 0;
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1+$medium-from) {
+  .presentation {
+    #shop {
+      .row-text-image {
+        .text {
+          .ink-splash {
+            &:nth-of-type(2) {
+              $transform: translateY(-5rem) translateX(60vw);
+              -webkit-transform: $transform;
+              transform: $transform;
+            }
+          }
+        }
+      }
+    }
+    #realisations {
+      .realisations {
+          .item {
+            width: 33.33%;
+            &:nth-child(n+3) {
+              display: inline-flex;
+            }
+            &:nth-child(n+4) {
+              display: none;
+            }
+          }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1+$large-from) {
+  .presentation {
+    #shop {
+      .row-text-image {
+        .text {
+          padding: 2.5rem;
+          .wrapper {
+            width: 85%;
+          }
+          .ink-splash {
+            &:nth-of-type(2) {
+              $transform: translateY(-4rem) translateX(20vw);
+              -webkit-transform: $transform;
+              transform: $transform;
+            }
+          }
+        }
+      }
+    }
+    #realisations {
+      .realisations {
+          .item {
+            width: 25%;
+            &:nth-child(n+4) {
+              display: inline-flex;
+            }
+            &:nth-child(n+5) {
+              display: none;
+            }
+          }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1+$extra-large-from) {
+  .presentation {
+    #shop {
+      .row-text-image {
+        display: inline-flex;
+        .text {
+          width: 50%;
+          padding: 5rem 0;
+          .ink-splash {
+            &:nth-of-type(2) {
+              $transform: translateY(-3rem) translateX(30vw);
+              -webkit-transform: $transform;
+              transform: $transform;
+            }
+          }
+        }
+        .image {
+          width: 50%;
+        }
+      }
+    }
+    #realisations {
+      .realisations {
+          .item {
+            width: 20%;
+            &:nth-child(n+5) {
+              display: inline-flex;
+            }
+          }
+      }
+    }
+  }
+}

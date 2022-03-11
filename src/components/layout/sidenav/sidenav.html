@@ -1,0 +1,8 @@
+<section class="sidenav">
+    <router-link v-for="(route,index) in routes" :key="index" :to="route.name">
+        <div class="item-link">{{route.label}}</div>
+    </router-link>
+    <div class="divider"></div>
+    <social-networks/>
+</section>
+

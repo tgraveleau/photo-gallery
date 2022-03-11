@@ -1,0 +1,6 @@
+<section class="social-networks">
+    <a v-for="socialMedia in socialMedias" :key="socialMedia.id" :href="socialMedia.url" target="_blank">
+        <img :src="`image/icons/${socialMedia.id}.png`" :title="socialMedia.label" :alt="socialMedia.label">
+    </a>
+</section>
+

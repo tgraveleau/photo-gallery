@@ -1,0 +1,21 @@
+<nav>
+    <router-link to="/">
+        <div class="title-container left">
+            <img src="../../../../public/image/logo.png" alt="Logo">
+            <div class="title">Tattoo Studio</div>
+        </div>
+    </router-link>
+    <div class="menu right">
+        <div class="hide-on-large-and-down">
+            <router-link v-for="(route,index) in routes" :key="index" :to="route.name" class="menu-item">
+                <div class="item-link">{{route.label}}</div>
+            </router-link>
+        </div>
+        <div class="btn-show-menu hide-on-extra-large" @click="toggleMenu" :class="{open: menuIsOpen}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>

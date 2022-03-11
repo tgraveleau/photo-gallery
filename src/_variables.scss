@@ -1,0 +1,10 @@
+$navbar-height: 4; //rem
+$background-color: rgba(0,0,0,.7);
+$secondary-color: #121316;
+$tertiary-color: #9c1d10;
+$extra-large-from: 992px;
+$large-from: 768px;
+$medium-from: 576px;
+$transition-duration: .5s;
+
+$gradient-tertiary: linear-gradient(178deg, lighten($tertiary-color, 10%), $tertiary-color 50%);

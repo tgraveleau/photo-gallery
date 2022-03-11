@@ -1,0 +1,23 @@
+$delay: .2s;
+
+.person-list {
+    .person-item-container {
+        padding: 1rem;
+        animation: appear-from-bottom .5s forwards;
+        opacity: 0;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * $delay;
+            }
+        }
+    }
+}
+
+@keyframes appear-from-bottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+    }
+}

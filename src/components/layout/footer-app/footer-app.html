@@ -1,0 +1,43 @@
+<section class="footer-app">
+  <div class="container">
+    <div class="sub-content hidden" v-infocus="'css-animation-appear-from-left'">
+      <div class="horaires">
+        <div class="title">Horaires</div>
+        <table>
+          <tr v-for="horaire in horaires" :key="horaire.jour">
+            <td>{{horaire.jour}}</td>
+            <td>{{horaire.ouverture}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="sub-content hidden" v-infocus="'css-animation-appear-from-right'">
+      <div class="nous-retrouver">
+        <div class="title">Retrouvez nous</div>
+        <div class="coordonnees">
+          <table>
+            <tr>
+              <td class="icon"><i class="material-icons">home</i></td>
+              <td class="coordonnee">68 rue Jules Guitton<br>49100 Angers<br>France</td>
+            </tr>
+            <tr>
+              <td class="icon"><i class="material-icons">phone</i></td>
+              <td class="coordonnee">02 41 87 55 28</td>
+            </tr>
+            <tr>
+              <td class="icon"><i class="material-icons">mail_outline</i></td>
+              <td class="coordonnee">infos@tattoostudiotewfick.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="social-networks">
+          <social-networks/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2018 TATTOO STUDIO - TOUS DROITS RÉSERVÉS - SITE RÉALISÉ PAR <a href="https://www.linkedin.com/in/teddy-graveleau" target="_blank">TEDDY GRAVELEAU</a>
+  </div>
+</section>
+

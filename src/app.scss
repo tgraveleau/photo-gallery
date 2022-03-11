@@ -1,0 +1,219 @@
+@import './variables.scss';
+
+body {
+    margin: 0;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow-x: hidden;
+    width: 100%;
+    &::-webkit-scrollbar {
+        width: 8px;
+        &-thumb {
+            //width: 8px;
+            background: linear-gradient(to bottom, lighten($secondary-color, 20%), $secondary-color);
+        }
+    }
+    a {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+#app {
+    background: linear-gradient(black 10rem, $secondary-color);
+    font-family: defaultFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    font-size: 1.25rem;
+    main {
+        & > *:not(.home) {
+            margin-top: 4rem;
+        }
+    }
+    .picture {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.ink-splash {
+  position: absolute;
+  z-index: 1;
+  transition: all .2s;
+}
+.over-ink-splash {
+  position: relative;
+  z-index: 2;
+}
+
+.page-title {
+  font-size: 3rem;
+  padding: 1rem 5rem;
+  margin-bottom: 1rem;
+  background: $tertiary-color;
+}
+
+.video-youtube {
+  height: 20rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.show-sidenav {
+    &-enter-active, &-leave-active {
+        transition: all 1s;
+    }
+    &-enter, &-leave-to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.show-page {
+    &-enter-active, &-leave-active {
+        transition: all 1s;
+    }
+    &-leave-to, &-enter {
+        position: absolute;
+        opacity: 0;
+    }
+}
+
+.appear-from-bottom {
+    &-enter-active, &-leave-active {
+        transition: all .5s;
+    }
+    &-leave-to, &-enter {
+        transform: translateY(100%);
+    }
+}
+
+.css-animation {
+    &-appear-from {
+        &-bottom {
+            animation: appearFromBottom .5s;
+        }
+        &-right {
+            animation: appearFromRight .5s;
+        }
+        &-left {
+            animation: appearFromLeft .5s;
+        }
+    }
+}
+
+@keyframes appearFromBottom {
+    $transform: translateY(10rem);
+    from {
+        opacity: 0;
+        -webkit-transform: $transform;
+        -moz-transform: $transform;
+        -ms-transform: $transform;
+        -o-transform: $transform;
+        transform: $transform;
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes appearFromRight {
+    $transform: translateX(10rem);
+    from {
+        opacity: 0;
+        -webkit-transform: $transform;
+        -moz-transform: $transform;
+        -ms-transform: $transform;
+        -o-transform: $transform;
+        transform: $transform;
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes appearFromLeft {
+    $transform: translateX(-10rem);
+    from {
+        opacity: 0;
+        -webkit-transform: $transform;
+        -moz-transform: $transform;
+        -ms-transform: $transform;
+        -o-transform: $transform;
+        transform: $transform;
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+main {
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.blur {
+    filter: blur(2px) grayscale(100%);
+    transform: scale(1.1);
+}
+
+.image-cover {
+    background-size: cover;
+    background-position: center;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+//.number {
+//    font-family: Arial, sans-serif;
+//}
+
+@media screen and (max-width: $medium-from) {
+  .page-title {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $extra-large-from) {
+    .hide-on-large-and-down {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1+$extra-large-from) {
+    .hide-on-extra-large {
+        display: none;
+    }
+}
+
+@font-face {
+    font-family: defaultFont;
+    //src: url('../public/font/default.ttf');
+    src: url('../public/font/louis_george_caf/Louis George Cafe.ttf');
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url('../public/font/tattoo-studio-font.otf');
+}
+
+:root {
+    --medium-screen: #{$medium-from};
+    --large-screen: #{$large-from};
+    --secondary-color: #{$secondary-color};
+}

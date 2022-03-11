@@ -1,0 +1,13 @@
+.social-networks {
+    a {
+        margin: 0 10px;
+        display: inline-block;
+        transition: .2s;
+        img {
+            height: 2rem;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+$background-color-btn: rgba(255,255,255,.5);
+.gallery {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    .close-btn {
+        $offset: 1.5rem;
+        cursor: pointer;
+        position: absolute;
+        top: $offset;
+        right: $offset;
+        z-index: 999999;
+        font-size: 3rem;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    .photo {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

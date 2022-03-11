@@ -1,0 +1,22 @@
+@import "../variables";
+.person-gallery {
+
+    .main-tattoo {
+        height: $height-lg;
+        width: 35%;
+        background-image: url('../../../assets/image/person/joey/main-tattoo.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .other-tattoos {
+        width: 65%;
+        height: 100%;
+        .tattoo {
+            height: .5 *$height-lg;
+            width: 100%;
+            background-image: url('../../../assets/image/person/joey/main-tattoo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

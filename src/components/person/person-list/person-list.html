@@ -1,0 +1,10 @@
+<section class="person-list">
+    <el-row>
+            <el-col v-for="(person,index) in persons" :key="index" class="person-item-container" :xs="24" :sm="12">
+                <person-portrait :person="person" :reverse="index %2 !== 0" @portraitClick="showGallery"/>
+            </el-col>
+    </el-row>
+    <transition name="appear-from-bottom">
+        <gallery v-if="activePerson" :person="activePerson" @close="activePerson = null"/>
+    </transition>
+</section>
